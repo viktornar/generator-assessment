@@ -17,7 +17,7 @@ public class SimpleNumberGeneratorTest {
     public void nextNumber() {
         var nextNumber = simpleNumberGeneratorA.nextNumber(simpleNumberGeneratorA.getNumber());
         var expectedNextNumber = 1092455L;
-        assertEquals(expectedNextNumber, (long) nextNumber);
+        assertEquals(expectedNextNumber, nextNumber);
     }
 
     @Test
