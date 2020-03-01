@@ -1,28 +1,34 @@
 package org.bitbucket.viktornar.generator;
 
-import junit.framework.TestCase;
+import org.junit.Before;
+import org.junit.Test;
+import static org.junit.Assert.*;
 
-public class SimpleNumberGeneratorTest extends TestCase {
+public class SimpleNumberGeneratorTest {
     SimpleNumberGenerator simpleNumberGeneratorA;
     SimpleNumberGenerator simpleNumberGeneratorB;
+
+    @Before
     public void setUp() throws Exception {
-        super.setUp();
         simpleNumberGeneratorA = new SimpleNumberGenerator(65L, 16807L);
     }
 
-    public void testNextNumber() {
+    @Test
+    public void nextNumber() {
         var nextNumber = simpleNumberGeneratorA.nextNumber(simpleNumberGeneratorA.getNumber());
         var expectedNextNumber = 1092455L;
         assertEquals(expectedNextNumber, (long) nextNumber);
     }
 
-    public void testToBinaryString() {
+    @Test
+    public void toBinaryString() {
         var actualBinaryString = simpleNumberGeneratorA.nextGenerator().toBinaryString();
         var expectedBinaryString = "00000000000100001010101101100111";
         assertEquals(expectedBinaryString, actualBinaryString);
     }
 
-    public void testNextGenerator() {
+    @Test
+    public void nextGenerator() {
         simpleNumberGeneratorB = simpleNumberGeneratorA.nextGenerator().nextGenerator();
 
         var nextNumber = simpleNumberGeneratorB.getNumber();
