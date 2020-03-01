@@ -1,7 +1,7 @@
 
 Genarator-assessment
 ===================
-A simple console application for counting how many numbers in generator matches
+A simple console application for counting how many numbers in two generators matches
 
 ![demo](images/result.png)
 
