@@ -10,7 +10,6 @@ public class SimpleNumberGenerator extends NumberGenerator {
     private final long factor;
 
     public SimpleNumberGenerator(long number, long factor) {
-        super(number, factor);
         this.factor = factor;
         this.number = number;
     }
