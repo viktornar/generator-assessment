@@ -3,6 +3,8 @@ package org.bitbucket.viktornar.utils;
 import java.util.HashMap;
 import java.util.Map;
 
+import static java.lang.String.format;
+
 public class CliUtils {
     /**
      * Parse arguments by given argument list from main method
@@ -34,5 +36,40 @@ public class CliUtils {
             }
         }
         return arguments;
+    }
+
+    /**
+     * Parse arguments value by given argument list and argument name
+     * @param args - arguments as string array
+     * @param argumentName - argument name as a string
+     * @return - parsed argument value
+     */
+    public static long parseNumberFromArgument(Map<String, String> args, String argumentName) {
+        long firstNumber = 0L;
+
+        if (args.get(argumentName) != null) {
+            try {
+                firstNumber = Long.parseLong(args.get(argumentName));
+            } catch (NumberFormatException exception) {
+                System.out.println(
+                        format(
+                                "Wrong number format for argument --%s",
+                                argumentName
+                        )
+                );
+                System.exit(0);
+            }
+        } else {
+            System.out.println(
+                    format(
+                            "--%s - was not specified. Usage example: --%s [number] . Program will be terminated",
+                            argumentName,
+                            argumentName
+                    )
+            );
+            System.exit(0);
+        }
+
+        return firstNumber;
     }
 }
