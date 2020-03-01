@@ -1,0 +1,8 @@
+*.class
+# build files
+target/
+.idea/
+*.iml
+.vscode/
+# virtual machine crash logs
+hs_err_pid*
