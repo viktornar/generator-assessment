@@ -3,9 +3,9 @@ package org.bitbucket.viktornar.generator;
 import org.apache.commons.lang3.StringUtils;
 
 import static org.bitbucket.viktornar.Constants.INTEGER_SIZE_IN_BITS;
+import static org.bitbucket.viktornar.Constants.INTEGER_SIZE_UPPER_BOUND;
 
 public class SimpleNumberGenerator extends NumberGenerator {
-    private final static long DIVIDER = 2147483647;
     private final long number;
     private final long factor;
 
@@ -22,7 +22,7 @@ public class SimpleNumberGenerator extends NumberGenerator {
 
     @Override
     public long nextNumber(long number) {
-        return (number * factor) % DIVIDER;
+        return (number * factor) % INTEGER_SIZE_UPPER_BOUND;
     }
 
     @Override
