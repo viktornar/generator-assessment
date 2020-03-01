@@ -3,6 +3,7 @@ Genarator-assessment
 ===================
 A simple console application for counting how many numbers in generator matches
 
+![demo](images/result.png)
 
 The main technologies (frameworks, build tools) that was used in project
 -------------
@@ -11,8 +12,8 @@ The main technologies (frameworks, build tools) that was used in project
 - JUnit for testing
 - Maven > 3.0 for project build is needed
 
-> **Note:**
-> - Project was written by using Java SDK 1.11. Source was compiled without compatibility with older Java version. So you need to have java 1.11 SDK to run this app.
+**Note:**
+> Project was written by using Java SDK 1.11. Source was compiled without compatibility with older Java version. So you need to have java 1.11 SDK to run this app.
 
 How to build and run project
 -------------
@@ -42,8 +43,8 @@ To execute program run:
 java -jar target/generator-assessment-jar-with-dependencies.jar --first-number 65 --second-number 8291
 ```
 
-> **Note:**
-> - You can also use already compiled jar for demo in bin directory.
+**Note:**
+> You can also use already compiled jar for demo in bin directory.
 
 ```bash
 java -jar bin/generator-assessment.jar --first-number 65 --second-number 8291
