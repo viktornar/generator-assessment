@@ -26,12 +26,10 @@ public class Executor {
             leftNumberGenerator = leftNumberGenerator.nextGenerator();
             rightNumberGenerator = rightNumberGenerator.nextGenerator();
 
-            if (
-                    numberComparator.match(
-                            leftNumberGenerator,
-                            rightNumberGenerator
-                    )
-            ) {
+            if (numberComparator.match(
+                    leftNumberGenerator,
+                    rightNumberGenerator
+            )) {
                 count += 1;
             }
         }

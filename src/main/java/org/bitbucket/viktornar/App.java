@@ -6,8 +6,6 @@ import org.bitbucket.viktornar.executor.ExecutorFactory;
 import org.bitbucket.viktornar.generator.type.GeneratorType;
 import org.bitbucket.viktornar.utils.CliUtils;
 
-import java.util.Map;
-
 import static java.lang.String.format;
 import static org.bitbucket.viktornar.Constants.INPUT_FIRST_NUMBER_ARG_NAME;
 import static org.bitbucket.viktornar.Constants.INPUT_SECOND_NUMBER_ARG_NAME;
