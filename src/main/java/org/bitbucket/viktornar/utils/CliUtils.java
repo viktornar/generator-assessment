@@ -10,11 +10,9 @@ public class CliUtils {
      * @return - parsed arguments store in map to get access by key that mapped to constants
      */
     public static Map<String, String> parseArguments(String... args) {
-        HashMap<String, String> arguments = new HashMap<String, String>();
+        HashMap<String, String> arguments = new HashMap<>();
 
         String key = null;
-        String value = null;
-        int index = 0;
 
         for (int i = 0; i < args.length; i++) {
             if (args[i].startsWith("--")) {
