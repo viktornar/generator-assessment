@@ -11,7 +11,6 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class GenericNumberComparatorTest {
-
     private GenericNumberComparator numberComparator;
     private SimpleNumberGenerator simpleNumberGeneratorB;
     private SimpleNumberGenerator simpleNumberGeneratorA;

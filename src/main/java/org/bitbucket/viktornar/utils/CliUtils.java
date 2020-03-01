@@ -62,7 +62,7 @@ public class CliUtils {
         } else {
             System.out.println(
                     format(
-                            "--%s - was not specified. Usage example: --%s [number] . Program will be terminated",
+                            "--%s - was not specified. Usage example: --%s [number]. Program will be terminated.",
                             argumentName,
                             argumentName
                     )

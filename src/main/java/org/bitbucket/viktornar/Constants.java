@@ -7,5 +7,5 @@ public class Constants {
     public final static String INPUT_FIRST_NUMBER_ARG_NAME = "first-number";
     public final static String INPUT_SECOND_NUMBER_ARG_NAME = "second-number";
 
-    public final static int DEFAULT_COMPARE_CYCLE_COUNT = 1000000000;
+    public final static int DEFAULT_COMPARE_CYCLE_COUNT = 1000000;
 }
