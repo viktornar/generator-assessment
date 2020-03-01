@@ -5,25 +5,24 @@ import org.apache.commons.lang3.StringUtils;
 import static org.bitbucket.viktornar.Constants.INTEGER_SIZE_IN_BITS;
 
 public class SimpleNumberGenerator extends NumberGenerator {
-    private final Long number;
-    private final Long factor;
-    private final Long divider;
+    private final static long DIVIDER = 2147483647;
+    private final long number;
+    private final long factor;
 
-    public SimpleNumberGenerator(Long number, Long factor, Long divider) {
-        super(number, factor, divider);
+    public SimpleNumberGenerator(long number, long factor) {
+        super(number, factor);
         this.factor = factor;
-        this.divider = divider;
-        this.number = nextNumber(number);
+        this.number = number;
     }
 
     @Override
     public SimpleNumberGenerator nextGenerator() {
-        return new SimpleNumberGenerator(number, factor, divider);
+        return new SimpleNumberGenerator(nextNumber(number), factor);
     }
 
     @Override
-    Long nextNumber(Long number) {
-        return (number * factor) % divider;
+    public long nextNumber(long number) {
+        return (number * factor) % DIVIDER;
     }
 
     @Override
@@ -33,13 +32,13 @@ public class SimpleNumberGenerator extends NumberGenerator {
     }
 
     @Override
-    public Long getNumber() {
+    public long getNumber() {
         return number;
     }
 
     @Override
     public String toString() {
-        return String.format("SimpleNumberGenerator{number=%s, factor=%d, divider=%d}",
-                toBinaryString(), factor, divider);
+        return String.format("SimpleNumberGenerator{number=%s, factor=%d}",
+                toBinaryString(), factor);
     }
 }

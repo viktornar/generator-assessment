@@ -1,18 +1,16 @@
 package org.bitbucket.viktornar.generator;
 
 public abstract class NumberGenerator {
-    private final Long number;
-    private final Long factor;
-    private final Long divider;
+    private final long number;
+    private final long factor;
 
-    public NumberGenerator(Long number, Long factor, Long divider) {
+    public NumberGenerator(long number, long factor) {
         this.number = number;
         this.factor = factor;
-        this.divider = divider;
     }
 
     abstract public NumberGenerator nextGenerator();
-    abstract Long nextNumber(Long number);
+    abstract public long nextNumber(long number);
     abstract public String toBinaryString();
-    public abstract Long getNumber();
+    public abstract long getNumber();
 }
