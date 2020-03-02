@@ -26,9 +26,9 @@ public class ExecutorFactory {
             long firstNumber,
             long secondNumber
     ) {
-        NumberGenerator aNumberGenerator = new GenericNumberGenerator(GeneratorType.A_NUMBER_GENERATOR, firstNumber);
-        NumberGenerator bNumberGenerator = new GenericNumberGenerator(GeneratorType.B_NUMBER_GENERATOR, secondNumber);
-        NumberComparator numberComparator = new GenericNumberComparator(ComparatorType.LAST_EIGHT_BITS);
-        return new Executor(aNumberGenerator, bNumberGenerator, numberComparator);
+        NumberGenerator leftNumberGenerator = new GenericNumberGenerator(leftGeneratorType, firstNumber);
+        NumberGenerator rightNumberGenerator = new GenericNumberGenerator(rightGeneratorType, secondNumber);
+        NumberComparator numberComparator = new GenericNumberComparator(comparatorType);
+        return new Executor(leftNumberGenerator, rightNumberGenerator, numberComparator);
     }
 }
