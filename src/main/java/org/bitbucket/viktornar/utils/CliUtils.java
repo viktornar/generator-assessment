@@ -6,11 +6,6 @@ import java.util.Map;
 import static java.lang.String.format;
 
 public class CliUtils {
-    /**
-     * Parse arguments by given argument list from main method
-     * @param args - arguments as string array
-     * @return - parsed arguments store in map to get access by key that mapped to constants
-     */
     public static Map<String, String> parseArguments(String... args) {
         HashMap<String, String> arguments = new HashMap<>();
 
@@ -38,12 +33,6 @@ public class CliUtils {
         return arguments;
     }
 
-    /**
-     * Parse arguments value by given argument list and argument name
-     * @param args - arguments as string array
-     * @param argumentName - argument name as a string
-     * @return - parsed argument value
-     */
     public static long parseNumberFromArgument(Map<String, String> args, String argumentName) {
         long firstNumber = 0L;
 
