@@ -5,4 +5,10 @@ public class BSimpleNumberGenerator extends SimpleNumberGenerator {
     public BSimpleNumberGenerator(long number) {
         super(number, B_GENERATOR_FACTOR);
     }
+
+    @Override
+    public String toString() {
+        return String.format("BSimpleNumberGenerator{number=%s, factor=%d}",
+                toBinaryString(), B_GENERATOR_FACTOR);
+    }
 }

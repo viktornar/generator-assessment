@@ -5,4 +5,10 @@ public class ASimpleNumberGenerator extends SimpleNumberGenerator {
     public ASimpleNumberGenerator(long number) {
         super(number, A_GENERATOR_FACTOR);
     }
+
+    @Override
+    public String toString() {
+        return String.format("ASimpleNumberGenerator{number=%s, factor=%d}",
+                toBinaryString(), A_GENERATOR_FACTOR);
+    }
 }
