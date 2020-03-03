@@ -11,12 +11,12 @@ public class Executor {
     private final NumberComparator numberComparator;
 
     public Executor(
-            NumberGenerator aNumberGenerator,
-            NumberGenerator bNumberGenerator,
+            NumberGenerator leftNumberGenerator,
+            NumberGenerator rightNumberGenerator,
             NumberComparator numberComparator
     ) {
-        this.leftNumberGenerator = aNumberGenerator;
-        this.rightNumberGenerator = bNumberGenerator;
+        this.leftNumberGenerator = leftNumberGenerator;
+        this.rightNumberGenerator = rightNumberGenerator;
         this.numberComparator = numberComparator;
     }
 
