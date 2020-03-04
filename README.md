@@ -20,7 +20,7 @@ How to build and run project
 Clone the project with the following command:
 
 ``
-TO BE DONE
+git clone git@bitbucket.org:viktornar/generator-assessment.git
 ``
 
 Go to the project directory:
